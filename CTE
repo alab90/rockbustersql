@@ -1,0 +1,21 @@
+# Here is a query as a CTE
+## This was used to answer the RockBuster's business question: Find the average amount paid by the top 5 customers 
+
+WITH total_amt_paid_CTE (total_amt_paid) AS
+SELECT (SUM(A.amount) as "total_amount_paid",
+	A.customer_id, B.first_name, B.last_name, B.email,
+D.city,
+E.country
+FROM payment A
+INNER JOIN customer B ON A.customer_id = B.customer_id
+INNER JOIN address C ON B.address_id = C.address_id
+INNER JOIN city D ON C.city_id = D.city_id
+INNER JOIN country E ON D.country_id = E.country_id
+GROUP BY A.customer_id, B.customer_ID, D.city, E.country
+HAVING city IN ('Aurora', 'Atlixco', 'Xintai', 'Adoni', 'Dhule (Dhulia)', 'Kurashiki', 'Pingxiang',
+'Sivas', 'Celaya', 'So Leopoldo')
+ORDER BY "total_amount_paid" DESC
+LIMIT 5)
+SELECT
+AVG (total_amt_paid)
+FROM total_amt_paid_CTE
