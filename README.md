@@ -12,3 +12,6 @@ Answer key business intelligence questions
 
 ## Data Set
 RockBuster data set that contains information about Rockbuster’s film inventory, customers, and payments. 
+
+## Links
+Tableau presentation (https://public.tableau.com/app/profile/april.labaro/viz/RockbusterPresentation_16922905489590/RockbusterDataViz)
