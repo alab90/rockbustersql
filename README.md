@@ -5,10 +5,10 @@ Rockbuster Stealth LLC is a movie rental company that used to have stores around
 
 ## Project purpose
 Answer key business intelligence questions
-    _What was the average rental duration for all videos?_
-    _Which countries are Rockbuster customers based in?_
-    _Where are customers with a high lifetime value based?_
-    _Do sales figures vary between geographic regions?_
+    +_What was the average rental duration for all videos?_
+    +_Which countries are Rockbuster customers based in?_
+    +_Where are customers with a high lifetime value based?_
+    +_Do sales figures vary between geographic regions?_
 
 ## Data Set
 RockBuster data set that contains information about Rockbuster’s film inventory, customers, and payments. 
